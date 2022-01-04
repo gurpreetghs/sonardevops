@@ -1,0 +1,9 @@
+{
+	"auth": {
+		"reactclientf952df88": {
+			"service": "Cognito",
+			"providerPlugin": "awscloudformation",
+			"dependsOn": []
+		}
+	}
+}
