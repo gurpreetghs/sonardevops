@@ -1,0 +1,65 @@
+version: "3"
+services:
+  react-clientz:
+    build:
+      context: ./react-client
+      dockerfile: DockerFile
+    command: npm run-script dev
+    ports:
+      - 3000:3000
+      - 9228:9229
+    volumes:
+      - ./react-client/src:/app/src
+    environment:
+      - NODE_ENV=development
+      - CHOKIDAR_USEPOLLING=true
+      - NEW_RELIC_NO_CONFIG_FILE = true
+    env_file:
+      - ./.env
+  graphql-api:
+    build:
+      context: ./graphql-api
+      dockerfile: DockerFile
+    command: npm run debug
+    ports:
+      - 8080:8080
+      - 9229:9229
+    volumes:
+      - ./graphql-api/src:/app/src
+      - ./graphql-api/dist:/app/dist
+      - ./graphql-api/package.json:/app/package.json
+      - ./graphql-api/ormconfig.js:/app/ormconfig.js
+      - ./graphql-api/tsconfig.json:/app/tsconfig.json
+      - ./graphql-api/er.yml:/app/er.yml
+    environment:
+      - DATABASE_CONNECTION_HOST=postgres
+      - DATABASE_CONNECTION_USERNAME=postgres
+      - DATABASE_CONNECTION_PASSWORD=FduPW7xzDWSGX73nwZkp
+      - NEW_RELIC_NO_CONFIG_FILE = true
+    env_file:
+      - ./.env
+  postgres:
+    image: postgres:11.5
+    restart: always
+    ports:
+      - 5432:5432
+    env_file:
+      - ./.env
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=FduPW7xzDWSGX73nwZkp
+      - POSTGRES_DB=dev
+    volumes:
+      - db_data:/var/lib/postgresql/data
+      - ./database/scripts:/dbscripts
+  pgadmin:
+    image: dpage/pgadmin4
+    ports:
+      - 8081:80
+    environment:
+      - PGADMIN_DEFAULT_EMAIL=noreply@spiredigital.com
+      - PGADMIN_DEFAULT_PASSWORD=password
+    volumes:
+      - ./pgadmin:/var/lib/pgadmin
+volumes:
+  db_data:

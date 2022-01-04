@@ -1,0 +1,15 @@
+version: "3"
+services:
+  graphql-api:
+    build:
+      context: ./graphql-api
+      dockerfile: DockerFile
+    command: npm start
+    restart: always
+    ports:
+      - 8080:8080
+      - 9229:9229
+    env_file:
+      - ./.env
+    volumes:
+     - /home/devops/signatry-7aab90f8ca38.json:/app/signatry-7aab90f8ca38.json

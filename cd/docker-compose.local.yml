@@ -1,0 +1,49 @@
+---
+version: '3'
+services:
+  router:
+    build:
+      context: ../
+      dockerfile: ./ci/router.dockerfile
+    restart: always
+    ports:
+      - 80:80
+    depends_on:
+      - frontend
+      - backend
+    environment:
+      NGINX_HOST: development.local
+    volumes:
+      - ../ci/router.local.conf.template:/etc/nginx/templates/default.conf.template
+  frontend:
+    build:
+      context: ../
+      dockerfile: ./ci/frontend.dockerfile
+    restart: always
+  backend:
+    build:
+      context: ../
+      dockerfile: ./ci/backend.dockerfile
+    restart: always
+    environment:
+      - DATABASE_CONNECTION_HOST=postgres
+      - DATABASE_CONNECTION_USERNAME=postgres
+      - DATABASE_CONNECTION_PASSWORD=FduPW7xzDWSGX73nwZkp
+    env_file:
+      - ./configuration
+    depends_on:
+      - postgres
+  postgres:
+    image: postgres:11.5
+    restart: always
+    ports:
+      - 5432:5432
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=FduPW7xzDWSGX73nwZkp
+      - POSTGRES_DB=signatry_dev
+    volumes:
+      - db_data:/var/lib/postgresql/data
+      - ../database/scripts:/dbscripts
+volumes:
+  db_data:

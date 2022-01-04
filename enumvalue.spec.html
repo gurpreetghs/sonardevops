@@ -1,0 +1,1016 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link type="text/css" rel="stylesheet" href="./styles/graphdoc.css" />
+    <title>__EnumValue</title>
+    <link href="https://fonts.googleapis.com/css?family=Ubuntu+Mono:400,700" rel="stylesheet"><link type="text/css" rel="stylesheet" href="./assets/code.css" /><link type="text/css" rel="stylesheet" href="./assets/require-by.css" />
+</head>
+<body class="slds-scrollable--y">
+    <nav class="slds-grid slds-grid--vertical slds-col--rule-right">
+        <header class="slds-p-around--medium slds-col slds-shrik slds-grow-none">
+            <button class="slds-button slds-button--icon slds-float--right js-toggle-navigation less-than-medium">
+                <i class="material-icons">close</i>
+            </button>
+                <h3 class="slds-text-heading--medium"><a href="./">GraphQL Schema</a></h3>
+            <div class="slds-p-top--small">
+                <input id="type-search" type="text" placeholder="Search a type" autofocus="" class="slds-input" />
+            </div>
+        </header>
+        <div id="navication-scroll" class="slds-scrollable--y slds-col slds-grow">
+<div class="slds-grid slds-grid--vertical slds-navigation-list--vertical">
+    <h4 class="slds-text-title--caps slds-p-around--medium">Schema</h4>
+    <ul>
+        <li  title="Query">
+            <a href="query.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
+                Query
+            </a>
+        </li>
+        <li  title="Mutation">
+            <a href="mutation.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
+                Mutation
+            </a>
+        </li>
+    </ul>
+</div>
+<div class="slds-grid slds-grid--vertical slds-navigation-list--vertical">
+    <h4 class="slds-text-title--caps slds-p-around--medium">Scalars</h4>
+    <ul>
+        <li  title="Boolean">
+            <a href="boolean.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
+                Boolean
+            </a>
+        </li>
+        <li  title="DateTime">
+            <a href="datetime.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
+                DateTime
+            </a>
+        </li>
+        <li  title="Float">
+            <a href="float.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
+                Float
+            </a>
+        </li>
+        <li  title="ID">
+            <a href="id.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
+                ID
+            </a>
+        </li>
+        <li  title="Int">
+            <a href="int.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
+                Int
+            </a>
+        </li>
+        <li  title="String">
+            <a href="string.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
+                String
+            </a>
+        </li>
+    </ul>
+</div>
+<div class="slds-grid slds-grid--vertical slds-navigation-list--vertical">
+    <h4 class="slds-text-title--caps slds-p-around--medium">Enums</h4>
+    <ul>
+        <li  title="CuratedCategory">
+            <a href="curatedcategory.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
+                CuratedCategory
+            </a>
+        </li>
+        <li  title="CurationInterval">
+            <a href="curationinterval.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
+                CurationInterval
+            </a>
+        </li>
+        <li  title="GrantOperations">
+            <a href="grantoperations.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
+                GrantOperations
+            </a>
+        </li>
+        <li  title="GrantPaymentStatusValue">
+            <a href="grantpaymentstatusvalue.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
+                GrantPaymentStatusValue
+            </a>
+        </li>
+        <li  title="OrderBy">
+            <a href="orderby.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
+                OrderBy
+            </a>
+        </li>
+        <li  title="RecurrenceStatuses">
+            <a href="recurrencestatuses.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
+                RecurrenceStatuses
+            </a>
+        </li>
+        <li  title="TransactionStatusValues">
+            <a href="transactionstatusvalues.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
+                TransactionStatusValues
+            </a>
+        </li>
+        <li  title="UserProfileAccountTypes">
+            <a href="userprofileaccounttypes.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
+                UserProfileAccountTypes
+            </a>
+        </li>
+        <li  title="__DirectiveLocation">
+            <a href="directivelocation.spec.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
+                __DirectiveLocation
+            </a>
+        </li>
+        <li  title="__TypeKind">
+            <a href="typekind.spec.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
+                __TypeKind
+            </a>
+        </li>
+    </ul>
+</div>
+<div class="slds-grid slds-grid--vertical slds-navigation-list--vertical">
+    <h4 class="slds-text-title--caps slds-p-around--medium">Unions</h4>
+    <ul>
+        <li  title="UIFundingSource">
+            <a href="uifundingsource.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
+                UIFundingSource
+            </a>
+        </li>
+        <li  title="UITenantFundingSource">
+            <a href="uitenantfundingsource.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
+                UITenantFundingSource
+            </a>
+        </li>
+    </ul>
+</div>
+<div class="slds-grid slds-grid--vertical slds-navigation-list--vertical">
+    <h4 class="slds-text-title--caps slds-p-around--medium">Objects</h4>
+    <ul>
+        <li  title="AdminGrantsByStatusResult">
+            <a href="admingrantsbystatusresult.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
+                AdminGrantsByStatusResult
+            </a>
+        </li>
+        <li  title="AppUser">
+            <a href="appuser.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
+                AppUser
+            </a>
+        </li>
+        <li  title="BaseEntity">
+            <a href="baseentity.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
+                BaseEntity
+            </a>
+        </li>
+        <li  title="Cause">
+            <a href="cause.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
+                Cause
+            </a>
+        </li>
+        <li  title="CharityCurationSettings">
+            <a href="charitycurationsettings.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
+                CharityCurationSettings
+            </a>
+        </li>
+        <li  title="ExpiredPlaidAccount">
+            <a href="expiredplaidaccount.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
+                ExpiredPlaidAccount
+            </a>
+        </li>
+        <li  title="ExpiredUIPlaidBankAccount">
+            <a href="expireduiplaidbankaccount.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
+                ExpiredUIPlaidBankAccount
+            </a>
+        </li>
+        <li  title="ExpiredUITenantPlaidBankAccount">
+            <a href="expireduitenantplaidbankaccount.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
+                ExpiredUITenantPlaidBankAccount
+            </a>
+        </li>
+        <li  title="FinalReviewMutationResponse">
+            <a href="finalreviewmutationresponse.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
+                FinalReviewMutationResponse
+            </a>
+        </li>
+        <li  title="Fund">
+            <a href="fund.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
+                Fund
+            </a>
+        </li>
+        <li  title="FundContact">
+            <a href="fundcontact.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
+                FundContact
+            </a>
+        </li>
+        <li  title="FundContactAddress">
+            <a href="fundcontactaddress.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
+                FundContactAddress
+            </a>
+        </li>
+        <li  title="FundContactEmail">
+            <a href="fundcontactemail.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
+                FundContactEmail
+            </a>
+        </li>
+        <li  title="FundContactPhone">
+            <a href="fundcontactphone.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
+                FundContactPhone
+            </a>
+        </li>
+        <li  title="FundHolding">
+            <a href="fundholding.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
+                FundHolding
+            </a>
+        </li>
+        <li  title="FundInvestment">
+            <a href="fundinvestment.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
+                FundInvestment
+            </a>
+        </li>
+        <li  title="FundTransaction">
+            <a href="fundtransaction.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
+                FundTransaction
+            </a>
+        </li>
+        <li  title="FundTransactionBatch">
+            <a href="fundtransactionbatch.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
+                FundTransactionBatch
+            </a>
+        </li>
+        <li  title="FundTransactionComment">
+            <a href="fundtransactioncomment.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
+                FundTransactionComment
+            </a>
+        </li>
+        <li  title="FundTransactionDetail">
+            <a href="fundtransactiondetail.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
+                FundTransactionDetail
+            </a>
+        </li>
+        <li  title="FundTransactionInfo">
+            <a href="fundtransactioninfo.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
+                FundTransactionInfo
+            </a>
+        </li>
+        <li  title="FundTransactionResults">
+            <a href="fundtransactionresults.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
+                FundTransactionResults
+            </a>
+        </li>
+        <li  title="FundTransactionSource">
+            <a href="fundtransactionsource.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
+                FundTransactionSource
+            </a>
+        </li>
+        <li  title="FundType">
+            <a href="fundtype.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
+                FundType
+            </a>
+        </li>
+        <li  title="FundUserProfile">
+            <a href="funduserprofile.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
+                FundUserProfile
+            </a>
+        </li>
+        <li  title="GLAccount">
+            <a href="glaccount.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
+                GLAccount
+            </a>
+        </li>
+        <li  title="GLAccountType">
+            <a href="glaccounttype.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
+                GLAccountType
+            </a>
+        </li>
+        <li  title="GrantUpdateResponse">
+            <a href="grantupdateresponse.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
+                GrantUpdateResponse
+            </a>
+        </li>
+        <li  title="Investment">
+            <a href="investment.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
+                Investment
+            </a>
+        </li>
+        <li  title="InvestmentHistoryDatum">
+            <a href="investmenthistorydatum.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
+                InvestmentHistoryDatum
+            </a>
+        </li>
+        <li  title="InvestmentHistoryEvent">
+            <a href="investmenthistoryevent.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
+                InvestmentHistoryEvent
+            </a>
+        </li>
+        <li  title="InvestmentInstruction">
+            <a href="investmentinstruction.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
+                InvestmentInstruction
+            </a>
+        </li>
+        <li  title="InvestmentUnitPriceHistory">
+            <a href="investmentunitpricehistory.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
+                InvestmentUnitPriceHistory
+            </a>
+        </li>
+        <li  title="Invitation">
+            <a href="invitation.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
+                Invitation
+            </a>
+        </li>
+        <li  title="LocationEntity">
+            <a href="locationentity.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
+                LocationEntity
+            </a>
+        </li>
+        <li  title="Payout">
+            <a href="payout.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
+                Payout
+            </a>
+        </li>
+        <li  title="Permission">
+            <a href="permission.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
+                Permission
+            </a>
+        </li>
+        <li  title="Person">
+            <a href="person.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
+                Person
+            </a>
+        </li>
+        <li  title="PersonSearchResults">
+            <a href="personsearchresults.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
+                PersonSearchResults
+            </a>
+        </li>
+        <li  title="PlaidAccount">
+            <a href="plaidaccount.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
+                PlaidAccount
+            </a>
+        </li>
+        <li  title="PlaidAccountBalances">
+            <a href="plaidaccountbalances.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
+                PlaidAccountBalances
+            </a>
+        </li>
+        <li  title="Recipient">
+            <a href="recipient.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
+                Recipient
+            </a>
+        </li>
+        <li  title="RecipientCause">
+            <a href="recipientcause.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
+                RecipientCause
+            </a>
+        </li>
+        <li  title="RecipientContact">
+            <a href="recipientcontact.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
+                RecipientContact
+            </a>
+        </li>
+        <li  title="RecipientContactAddress">
+            <a href="recipientcontactaddress.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
+                RecipientContactAddress
+            </a>
+        </li>
+        <li  title="RecipientContactEmail">
+            <a href="recipientcontactemail.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
+                RecipientContactEmail
+            </a>
+        </li>
+        <li  title="RecipientContactPhone">
+            <a href="recipientcontactphone.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
+                RecipientContactPhone
+            </a>
+        </li>
+        <li  title="RecipientSearchResult">
+            <a href="recipientsearchresult.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
+                RecipientSearchResult
+            </a>
+        </li>
+        <li  title="RecipientSearchResults">
+            <a href="recipientsearchresults.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
+                RecipientSearchResults
+            </a>
+        </li>
+        <li  title="RecipientStatus">
+            <a href="recipientstatus.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
+                RecipientStatus
+            </a>
+        </li>
+        <li  title="RecipientTag">
+            <a href="recipienttag.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
+                RecipientTag
+            </a>
+        </li>
+        <li  title="RecurringGrantsCounts">
+            <a href="recurringgrantscounts.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
+                RecurringGrantsCounts
+            </a>
+        </li>
+        <li  title="Role">
+            <a href="role.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
+                Role
+            </a>
+        </li>
+        <li  title="RolePermission">
+            <a href="rolepermission.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
+                RolePermission
+            </a>
+        </li>
+        <li  title="SpecialApprovalMutationResponse">
+            <a href="specialapprovalmutationresponse.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
+                SpecialApprovalMutationResponse
+            </a>
+        </li>
+        <li  title="Tag">
+            <a href="tag.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
+                Tag
+            </a>
+        </li>
+        <li  title="Tenant">
+            <a href="tenant.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
+                Tenant
+            </a>
+        </li>
+        <li  title="TenantAccount">
+            <a href="tenantaccount.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
+                TenantAccount
+            </a>
+        </li>
+        <li  title="TenantPasswordSettings">
+            <a href="tenantpasswordsettings.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
+                TenantPasswordSettings
+            </a>
+        </li>
+        <li  title="TenantPurposeNotesCategorySettings">
+            <a href="tenantpurposenotescategorysettings.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
+                TenantPurposeNotesCategorySettings
+            </a>
+        </li>
+        <li  title="TenantSettings">
+            <a href="tenantsettings.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
+                TenantSettings
+            </a>
+        </li>
+        <li  title="TransactionAllocation">
+            <a href="transactionallocation.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
+                TransactionAllocation
+            </a>
+        </li>
+        <li  title="TransactionDetailStatus">
+            <a href="transactiondetailstatus.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
+                TransactionDetailStatus
+            </a>
+        </li>
+        <li  title="TransactionEvent">
+            <a href="transactionevent.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
+                TransactionEvent
+            </a>
+        </li>
+        <li  title="TransactionRecurrence">
+            <a href="transactionrecurrence.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
+                TransactionRecurrence
+            </a>
+        </li>
+        <li  title="TransactionStatus">
+            <a href="transactionstatus.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
+                TransactionStatus
+            </a>
+        </li>
+        <li  title="TransactionType">
+            <a href="transactiontype.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
+                TransactionType
+            </a>
+        </li>
+        <li  title="UIPlaidBalances">
+            <a href="uiplaidbalances.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
+                UIPlaidBalances
+            </a>
+        </li>
+        <li  title="UIPlaidBankAccount">
+            <a href="uiplaidbankaccount.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
+                UIPlaidBankAccount
+            </a>
+        </li>
+        <li  title="UIStripeCard">
+            <a href="uistripecard.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
+                UIStripeCard
+            </a>
+        </li>
+        <li  title="UITenantPlaidBankAccount">
+            <a href="uitenantplaidbankaccount.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
+                UITenantPlaidBankAccount
+            </a>
+        </li>
+        <li  title="UnitPriceHistoryDatum">
+            <a href="unitpricehistorydatum.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
+                UnitPriceHistoryDatum
+            </a>
+        </li>
+        <li  title="UnitPriceHistoryEvent">
+            <a href="unitpricehistoryevent.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
+                UnitPriceHistoryEvent
+            </a>
+        </li>
+        <li  title="UserProfile">
+            <a href="userprofile.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
+                UserProfile
+            </a>
+        </li>
+        <li  title="UserProfileAccount">
+            <a href="userprofileaccount.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
+                UserProfileAccount
+            </a>
+        </li>
+        <li  title="UserProfileAddress">
+            <a href="userprofileaddress.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
+                UserProfileAddress
+            </a>
+        </li>
+        <li  title="UserProfileEmail">
+            <a href="userprofileemail.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
+                UserProfileEmail
+            </a>
+        </li>
+        <li  title="UserProfilePhone">
+            <a href="userprofilephone.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
+                UserProfilePhone
+            </a>
+        </li>
+        <li  title="UserProfileRole">
+            <a href="userprofilerole.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
+                UserProfileRole
+            </a>
+        </li>
+        <li  title="__Directive">
+            <a href="directive.spec.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
+                __Directive
+            </a>
+        </li>
+        <li class="slds-is-active" title="__EnumValue">
+            <a href="enumvalue.spec.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
+                __EnumValue
+            </a>
+        </li>
+        <li  title="__Field">
+            <a href="field.spec.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
+                __Field
+            </a>
+        </li>
+        <li  title="__InputValue">
+            <a href="inputvalue.spec.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
+                __InputValue
+            </a>
+        </li>
+        <li  title="__Schema">
+            <a href="schema.spec.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
+                __Schema
+            </a>
+        </li>
+        <li  title="__Type">
+            <a href="type.spec.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
+                __Type
+            </a>
+        </li>
+    </ul>
+</div>
+<div class="slds-grid slds-grid--vertical slds-navigation-list--vertical">
+    <h4 class="slds-text-title--caps slds-p-around--medium">Input Objects</h4>
+    <ul>
+        <li  title="CreateFundContributionInput">
+            <a href="createfundcontributioninput.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
+                CreateFundContributionInput
+            </a>
+        </li>
+        <li  title="CreateFundInput">
+            <a href="createfundinput.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
+                CreateFundInput
+            </a>
+        </li>
+        <li  title="CreateFundTransactionCommentInput">
+            <a href="createfundtransactioncommentinput.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
+                CreateFundTransactionCommentInput
+            </a>
+        </li>
+        <li  title="CreateGrantRecipientInput">
+            <a href="creategrantrecipientinput.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
+                CreateGrantRecipientInput
+            </a>
+        </li>
+        <li  title="CreateGrantRecommendationInput">
+            <a href="creategrantrecommendationinput.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
+                CreateGrantRecommendationInput
+            </a>
+        </li>
+        <li  title="CreateProfileAddressInput">
+            <a href="createprofileaddressinput.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
+                CreateProfileAddressInput
+            </a>
+        </li>
+        <li  title="CreateProfileEmailInput">
+            <a href="createprofileemailinput.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
+                CreateProfileEmailInput
+            </a>
+        </li>
+        <li  title="CreateProfilePhoneInput">
+            <a href="createprofilephoneinput.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
+                CreateProfilePhoneInput
+            </a>
+        </li>
+        <li  title="CreateTenantAccountInput">
+            <a href="createtenantaccountinput.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
+                CreateTenantAccountInput
+            </a>
+        </li>
+        <li  title="CreateUserProfileAccountInput">
+            <a href="createuserprofileaccountinput.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
+                CreateUserProfileAccountInput
+            </a>
+        </li>
+        <li  title="DateComparisonFilterClass">
+            <a href="datecomparisonfilterclass.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
+                DateComparisonFilterClass
+            </a>
+        </li>
+        <li  title="DateFilter">
+            <a href="datefilter.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
+                DateFilter
+            </a>
+        </li>
+        <li  title="FeeTransactionOrderBy">
+            <a href="feetransactionorderby.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
+                FeeTransactionOrderBy
+            </a>
+        </li>
+        <li  title="FundFilter">
+            <a href="fundfilter.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
+                FundFilter
+            </a>
+        </li>
+        <li  title="FundInvestmentFilter">
+            <a href="fundinvestmentfilter.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
+                FundInvestmentFilter
+            </a>
+        </li>
+        <li  title="FundInvestmentOrderBy">
+            <a href="fundinvestmentorderby.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
+                FundInvestmentOrderBy
+            </a>
+        </li>
+        <li  title="FundOrderBy">
+            <a href="fundorderby.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
+                FundOrderBy
+            </a>
+        </li>
+        <li  title="FundTransactionCommentFilter">
+            <a href="fundtransactioncommentfilter.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
+                FundTransactionCommentFilter
+            </a>
+        </li>
+        <li  title="FundTransactionCommentOrderBy">
+            <a href="fundtransactioncommentorderby.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
+                FundTransactionCommentOrderBy
+            </a>
+        </li>
+        <li  title="FundTransactionFilter">
+            <a href="fundtransactionfilter.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
+                FundTransactionFilter
+            </a>
+        </li>
+        <li  title="FundTransactionOrderBy">
+            <a href="fundtransactionorderby.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
+                FundTransactionOrderBy
+            </a>
+        </li>
+        <li  title="FundTypeFilter">
+            <a href="fundtypefilter.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
+                FundTypeFilter
+            </a>
+        </li>
+        <li  title="FundTypeOrderBy">
+            <a href="fundtypeorderby.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
+                FundTypeOrderBy
+            </a>
+        </li>
+        <li  title="FundUserProfileFilter">
+            <a href="funduserprofilefilter.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
+                FundUserProfileFilter
+            </a>
+        </li>
+        <li  title="FundUserProfileOrderBy">
+            <a href="funduserprofileorderby.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
+                FundUserProfileOrderBy
+            </a>
+        </li>
+        <li  title="GrantUpdateInput">
+            <a href="grantupdateinput.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
+                GrantUpdateInput
+            </a>
+        </li>
+        <li  title="InvestmentFilter">
+            <a href="investmentfilter.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
+                InvestmentFilter
+            </a>
+        </li>
+        <li  title="InvestmentInput">
+            <a href="investmentinput.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
+                InvestmentInput
+            </a>
+        </li>
+        <li  title="InvestmentOrderBy">
+            <a href="investmentorderby.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
+                InvestmentOrderBy
+            </a>
+        </li>
+        <li  title="InvestmentUnitPriceHistoryFilter">
+            <a href="investmentunitpricehistoryfilter.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
+                InvestmentUnitPriceHistoryFilter
+            </a>
+        </li>
+        <li  title="InvestmentUnitPriceHistoryInput">
+            <a href="investmentunitpricehistoryinput.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
+                InvestmentUnitPriceHistoryInput
+            </a>
+        </li>
+        <li  title="InvestmentUnitPriceHistoryOrderBy">
+            <a href="investmentunitpricehistoryorderby.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
+                InvestmentUnitPriceHistoryOrderBy
+            </a>
+        </li>
+        <li  title="NumberComparisonFilterClass">
+            <a href="numbercomparisonfilterclass.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
+                NumberComparisonFilterClass
+            </a>
+        </li>
+        <li  title="NumberFilter">
+            <a href="numberfilter.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
+                NumberFilter
+            </a>
+        </li>
+        <li  title="OneTimeGrantInput">
+            <a href="onetimegrantinput.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
+                OneTimeGrantInput
+            </a>
+        </li>
+        <li  title="PayoutFilter">
+            <a href="payoutfilter.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
+                PayoutFilter
+            </a>
+        </li>
+        <li  title="PayoutOrderBy">
+            <a href="payoutorderby.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
+                PayoutOrderBy
+            </a>
+        </li>
+        <li  title="PeopleOrderBy">
+            <a href="peopleorderby.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
+                PeopleOrderBy
+            </a>
+        </li>
+        <li  title="RecipientContactAddressOrderBy">
+            <a href="recipientcontactaddressorderby.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
+                RecipientContactAddressOrderBy
+            </a>
+        </li>
+        <li  title="RecipientContactFilter">
+            <a href="recipientcontactfilter.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
+                RecipientContactFilter
+            </a>
+        </li>
+        <li  title="RecipientContactOrderBy">
+            <a href="recipientcontactorderby.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
+                RecipientContactOrderBy
+            </a>
+        </li>
+        <li  title="RecipientFilter">
+            <a href="recipientfilter.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
+                RecipientFilter
+            </a>
+        </li>
+        <li  title="RecipientOrderBy">
+            <a href="recipientorderby.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
+                RecipientOrderBy
+            </a>
+        </li>
+        <li  title="RecurringGrantInput">
+            <a href="recurringgrantinput.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
+                RecurringGrantInput
+            </a>
+        </li>
+        <li  title="StringFilter">
+            <a href="stringfilter.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
+                StringFilter
+            </a>
+        </li>
+        <li  title="TenantAccountFilter">
+            <a href="tenantaccountfilter.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
+                TenantAccountFilter
+            </a>
+        </li>
+        <li  title="TenantAccountOrderBy">
+            <a href="tenantaccountorderby.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
+                TenantAccountOrderBy
+            </a>
+        </li>
+        <li  title="TenantPurposeNotesCategorySettingsInput">
+            <a href="tenantpurposenotescategorysettingsinput.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
+                TenantPurposeNotesCategorySettingsInput
+            </a>
+        </li>
+        <li  title="TransactionDetailFilter">
+            <a href="transactiondetailfilter.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
+                TransactionDetailFilter
+            </a>
+        </li>
+        <li  title="TransactionInfoFilter">
+            <a href="transactioninfofilter.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
+                TransactionInfoFilter
+            </a>
+        </li>
+        <li  title="TransactionInfoOrderBy">
+            <a href="transactioninfoorderby.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
+                TransactionInfoOrderBy
+            </a>
+        </li>
+        <li  title="TransactionSourceFilter">
+            <a href="transactionsourcefilter.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
+                TransactionSourceFilter
+            </a>
+        </li>
+        <li  title="TransactionStatusFilter">
+            <a href="transactionstatusfilter.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
+                TransactionStatusFilter
+            </a>
+        </li>
+        <li  title="TransactionStatusOrderBy">
+            <a href="transactionstatusorderby.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
+                TransactionStatusOrderBy
+            </a>
+        </li>
+        <li  title="TransactionTypeFilter">
+            <a href="transactiontypefilter.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
+                TransactionTypeFilter
+            </a>
+        </li>
+        <li  title="TransactionTypeOrderBy">
+            <a href="transactiontypeorderby.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
+                TransactionTypeOrderBy
+            </a>
+        </li>
+        <li  title="UpdateProfileAddressInput">
+            <a href="updateprofileaddressinput.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
+                UpdateProfileAddressInput
+            </a>
+        </li>
+        <li  title="UpdateProfileEmailInput">
+            <a href="updateprofileemailinput.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
+                UpdateProfileEmailInput
+            </a>
+        </li>
+        <li  title="UpdateProfilePhoneInput">
+            <a href="updateprofilephoneinput.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
+                UpdateProfilePhoneInput
+            </a>
+        </li>
+        <li  title="UpdateTransactionInfoInput">
+            <a href="updatetransactioninfoinput.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
+                UpdateTransactionInfoInput
+            </a>
+        </li>
+        <li  title="UserProfileAccountFilter">
+            <a href="userprofileaccountfilter.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
+                UserProfileAccountFilter
+            </a>
+        </li>
+        <li  title="UserProfileAccountOrderBy">
+            <a href="userprofileaccountorderby.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
+                UserProfileAccountOrderBy
+            </a>
+        </li>
+        <li  title="UserProfileAddressFilter">
+            <a href="userprofileaddressfilter.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
+                UserProfileAddressFilter
+            </a>
+        </li>
+        <li  title="UserProfileAddressOrderBy">
+            <a href="userprofileaddressorderby.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
+                UserProfileAddressOrderBy
+            </a>
+        </li>
+        <li  title="UserProfileEmailFilter">
+            <a href="userprofileemailfilter.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
+                UserProfileEmailFilter
+            </a>
+        </li>
+        <li  title="UserProfileEmailOrderBy">
+            <a href="userprofileemailorderby.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
+                UserProfileEmailOrderBy
+            </a>
+        </li>
+        <li  title="UserProfileFilter">
+            <a href="userprofilefilter.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
+                UserProfileFilter
+            </a>
+        </li>
+        <li  title="UserProfileInput">
+            <a href="userprofileinput.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
+                UserProfileInput
+            </a>
+        </li>
+        <li  title="UserProfileOrderBy">
+            <a href="userprofileorderby.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
+                UserProfileOrderBy
+            </a>
+        </li>
+        <li  title="UserProfilePayload">
+            <a href="userprofilepayload.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
+                UserProfilePayload
+            </a>
+        </li>
+        <li  title="UserProfilePhoneFilter">
+            <a href="userprofilephonefilter.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
+                UserProfilePhoneFilter
+            </a>
+        </li>
+        <li  title="UserProfilePhoneOrderBy">
+            <a href="userprofilephoneorderby.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
+                UserProfilePhoneOrderBy
+            </a>
+        </li>
+    </ul>
+</div>
+<div class="slds-grid slds-grid--vertical slds-navigation-list--vertical">
+    <h4 class="slds-text-title--caps slds-p-around--medium">Directives</h4>
+    <ul>
+        <li  title="deprecated">
+            <a href="deprecated.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
+                deprecated
+            </a>
+        </li>
+        <li  title="include">
+            <a href="include.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
+                include
+            </a>
+        </li>
+        <li  title="skip">
+            <a href="skip.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
+                skip
+            </a>
+        </li>
+    </ul>
+</div>
+        </div>
+    </nav>
+    <main><section class="title slds-theme--inverse">
+    <div class="container slds-grid">
+        <div>
+        <button class="slds-button js-toggle-navigation less-than-medium">
+            <i class="material-icons slds-button__icon slds-button__icon--left">menu</i>
+            <span class="slds-text-title--caps">Types<span>
+        </button>
+        </div>
+        </div>
+    </div>
+    <div class="container">
+        <p class="slds-text-title--caps slds-text-color--weak">OBJECT</p>
+        <h1 class="slds-text-heading--large">__EnumValue</h1>
+        <div class="slds-text-body--regular"><p>One possible value for a given Enum. Enum values are unique values, not a placeholder for a string or numeric value. However an Enum value is returned in a JSON response as a string.</p>
+</div>
+    </div>
+</section>
+<section>
+    <div class="container">
+        <h2 id="graphql-schema-definition" class="graphdoc-section__title slds-text-heading--medium slds-m-top--small">
+            <a href="#graphql-schema-definition">
+                <i class="material-icons">link</i>
+            </a>
+            GraphQL Schema definition
+        </h2>
+        <code class="highlight"><ul class="code" style="padding-left:42px"><li><span class="keyword operator ts">type</span> <span class="identifier">__EnumValue</span> {</li><li></li><li><span class="tab"><span class="meta">name</span>: <a class="support type" href="string.doc.html">String</a>! </span></li><li></li><li><span class="tab"><span class="meta">description</span>: <a class="support type" href="string.doc.html">String</a> </span></li><li></li><li><span class="tab"><span class="meta">isDeprecated</span>: <a class="support type" href="boolean.doc.html">Boolean</a>! </span></li><li></li><li><span class="tab"><span class="meta">deprecationReason</span>: <a class="support type" href="string.doc.html">String</a> </span></li><li>}</li></ul></code>
+    </div>
+</section>
+<section>
+    <div class="container">
+        <h2 id="require-by" class="graphdoc-section__title slds-text-heading--medium slds-m-top--small">
+            <a href="#require-by">
+                <i class="material-icons">link</i>
+            </a>
+            Require by
+        </h2>
+        <ul class="require-by"><li><a href="type.spec.html" title="__Type - The fundamental unit of any GraphQL Schema is the type. There are many kinds of types in GraphQL as represented by the `__TypeKind` enum.
+
+Depending on the kind of a type, certain fields describe information about that type. Scalar types provide no information beyond a name and description, while Enum types provide their values. Object and Interface types provide the fields they describe. Abstract types, Union and Interface, provide the Object types possible at runtime. List and NonNull types compose other types.">__Type<em>The fundamental unit of any GraphQL Schema is the type. There are many kinds of types in GraphQL as represented by the `__TypeKind` enum.
+
+Depending on the kind of a type, certain fields describe information about that type. Scalar types provide no information beyond a name and description, while Enum types provide their values. Object and Interface types provide the fields they describe. Abstract types, Union and Interface, provide the Object types possible at runtime. List and NonNull types compose other types.</em></a><li></ul>
+    </div>
+</section>
+<footer>
+<div class="container slds-p-around--large">
+    <p class="slds-text-align--right slds-text-title--caps">
+        Generated with <a href="https://github.com/2fd/graphdoc#readme" target="_blank">graphdoc 2.4.0</a>
+    </p>
+</div>
+</footer>
+</main>
+    <script src="./scripts/focus-active.js"></script>
+    <script src="./scripts/filter-types.js"></script>
+    <script src="./scripts/toggle-navigation.js"></script>
+</body>

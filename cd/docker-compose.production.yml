@@ -1,0 +1,79 @@
+---
+version: '3'
+volumes:
+  certbot-data:
+services:
+  certbot:
+    image: certbot/certbot:latest
+    volumes:
+      - /etc/letsencrypt:/etc/letsencrypt
+      - certbot-data:/var/www/certbot
+    entrypoint: "/bin/sh -c 'trap exit TERM; while :; do certbot renew; sleep 12h & wait $${!}; done;'"
+    logging:
+      driver: gcplogs
+  router:
+    image: "gcr.io/signatry/router:${BRANCH_NAME}"
+    ports:
+      - 80:80
+      - 443:443
+    volumes:
+      - /etc/letsencrypt:/etc/letsencrypt
+      - certbot-data:/var/www/certbot
+    command: "/bin/sh -c '/docker-entrypoint.sh nginx -v; while :; do sleep 6h & wait $${!}; nginx -s reload; done & exec nginx -g \"daemon off;\"'"
+    environment:
+      NGINX_HOST: "${HOST}"
+    depends_on:
+      - certbot
+      - frontend
+      - backend
+    logging:
+      driver: gcplogs
+  frontend:
+    image: "gcr.io/signatry/frontend:${BRANCH_NAME}"
+    volumes:
+      - ./config.js:/srv/www/config.js
+    logging:
+      driver: gcplogs
+  backend:
+    image: "gcr.io/signatry/backend:${BRANCH_NAME}"
+    command: node --max-old-space-size=${memory} /srv/www/src/index.js
+    environment:
+      CRON_CONTAINER: "false"
+      CRON_BYPASS: "false"
+    env_file:
+      - ./configuration
+    volumes:
+      - ./signatry-7aab90f8ca38.json:/app/signatry-7aab90f8ca38.json
+    deploy:
+      replicas: 2
+    healthcheck:
+      test: ["CMD", "curl", "-sf", "http://localhost:8080/api/healthcheck"]
+      interval: 30s
+      timeout: 5s
+      retries: 3
+    depends_on:
+      - pgbouncer
+    logging:
+      driver: gcplogs
+  database-migration:
+    image: "gcr.io/signatry/backend:${BRANCH_NAME}"
+    env_file:
+      - ./configuration
+    command: "bin/sh -c 'cd /srv/www && npx typeorm migration:run && ./release-scripts/run.sh'"
+    deploy:
+      restart_policy:
+        condition: none
+    depends_on:
+      - pgbouncer
+    logging:
+      driver: gcplogs
+  pgbouncer:
+    image: "gcr.io/signatry/pgbouncer:${BRANCH_NAME}"
+    restart: always
+    ports:
+      - 6432:6432
+    env_file:
+      - ./configuration
+    logging:
+      driver: gcplogs
+...
