@@ -1,0 +1,29 @@
+image: kroniak/ssh-client:3.1
+pipelines:
+  branches:
+    dev: # this dev branch pipeline will deploy to the dev environment
+      - step:
+          name: Build and release
+          script:
+          - mkdir -p ~/.ssh
+          - (umask  077 ; echo $SSH_PRIVATE_KEY | base64 -d > ~/.ssh/id_rsa)
+          - echo $ENV_DEV | base64 -d > env-file
+          - chmod 400 ~/.ssh/id_rsa
+          - echo -e "Host  *\n\tStrictHostKeyChecking no\n\n" > ~/.ssh/config
+          - scp env-file master@104.196.244.123:/opt/signatry-dev/.env
+          - ssh master@104.196.244.123 "cd /opt/signatry-dev/ && git stash && git pull && docker-compose pull && docker-compose -f docker-compose.server.yml build --no-cache && docker-compose -f docker-compose.server.yml up --force-recreate -d"
+          - ssh master@104.196.244.123 "cd /opt/signatry-dev/ && docker exec signatry-dev_graphql-api_1 npx typeorm migration:run"
+
+  custom: # Pipelines that can only be triggered manually
+    staging: # this staging branch pipeline will deploy to the staging environment
+      - step:
+          name: Build and release
+          script:
+          - mkdir -p ~/.ssh
+          - (umask  077 ; echo $SSH_PRIVATE_KEY | base64 -d > ~/.ssh/id_rsa)
+          - echo $ENV_DEV | base64 -d > env-file
+          - chmod 400 ~/.ssh/id_rsa
+          - echo -e "Host  *\n\tStrictHostKeyChecking no\n\n" > ~/.ssh/config
+          - scp env-file master@35.230.70.6:/opt/signatry-dev/.env
+          - ssh master@35.230.70.6 "cd /opt/signatry-dev/ && git stash && git pull && docker-compose pull && docker-compose -f docker-compose.server.yml build --no-cache && docker-compose -f docker-compose.server.yml up --force-recreate -d"
+          - ssh master@35.230.70.6 "cd /opt/signatry-dev/ && docker exec signatry-dev_graphql-api_1 npx typeorm migration:run"
